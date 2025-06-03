@@ -5,25 +5,54 @@ body {
   text-align: center;
   padding-top: 10%;
   display: flex;
-  overflow: hidden;
-  height: 100vh;
+  overGflow: hidden;
+  /*height: 100vh;*/
   margin: 0;
   justify-content: center;
   align-items: center;
 
 }
 
+.head-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.head-container img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+#head-bottom {
+  transform-origin: top center;
+  margin-top: 14rem;
+}
+
 #message {
-  margin-top: 6rem;
+  position: relative;
   font-size: 3rem;
   text-align: center;
   animation: pulse 1s infinite;
 }
+
+#fuckyou-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
 #finger {
-  margin-top: 1rem;
-  font-size: 10rem;
+  position: relative;
+  font-size: 3rem;
   text-align: center;
   animation: fpulse 1s infinite;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @keyframes pulse {
@@ -33,7 +62,7 @@ body {
 }
 
 @keyframes fpulse {
-  0% { transform: scale(2); }
-  50% { transform: scale(1); }
-  100% { transform: scale(2); }
+  0% { transform: scale(1.5) rotate(0deg); }
+  50% { transform: scale(1) rotate(180deg); }
+  100% { transform: scale(1.5) rotate(360deg); }
 }
